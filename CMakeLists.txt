@@ -1,6 +1,4 @@
-set(COMPONENT_ADD_INCLUDEDIRS include)
-set(COMPONENT_SRCS "ds18b20.c")
-set(COMPONENT_PRIV_REQUIRES "owb")
-register_component()
-
-
+idf_component_register(SRCS "ds18b20.c"
+                       INCLUDE_DIRS include
+                       PRIV_REQUIRES "owb"
+                       REQUIRES driver)
